@@ -28,7 +28,7 @@ Output:Promise
 def gpt3_completion(prompt, engine='text-davinci-002', temp=0.6, top_p=1.0, tokens=2000, freq_pen=0.25, pres_pen=0.0):
     max_retry = 5
     retry = 0
-    openai.api_key = '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'
+    openai.api_key = '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'
     while True:
         #try:
         response = openai.Completion.create(
@@ -112,7 +112,7 @@ if __name__ == '__main__':
             print(f"Type: Task Oriented, Application: Weather, Iloc: {ilocutionaryForce}")
         else: 
             if ilocutionaryForce not in possible_ilocs:
-                print(f"No match, Iloc: {ilocutionaryForce}")
+                print(f"No match, Iloc: {ilocutionaryForce}, Possible ilocs: {possible_ilocs}")
             else:
                 print(f"Iloc: {ilocutionaryForce}")
                 print(f"Number of semantically similair statements: {len(selected)}")
@@ -120,3 +120,6 @@ if __name__ == '__main__':
 # lovely weather today
 # I'd like to order some pizza
 # Will it be rainy tonight?
+
+# conda activate
+# python3 
